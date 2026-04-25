@@ -20,4 +20,4 @@ This project is a MySQL-based system to manage construction projects, workers, m
 - queries.sql → analysis queries
 
 ## 👨‍💻 Author
-Your Name
+SHUBHANSHU MISHRA 
