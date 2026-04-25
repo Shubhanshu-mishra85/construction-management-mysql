@@ -1,127 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SSS Group</title>
+    <title>SSS Group Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f4f6f9;
+            font-family: Arial;
+            display: flex;
         }
 
-        h1 {
-            background: linear-gradient(90deg, #000000, #434343);
+        /* Sidebar */
+        .sidebar {
+            width: 220px;
+            background: #111;
             color: white;
-            padding: 15px;
-            margin: 0;
+            height: 100vh;
+            padding-top: 20px;
         }
 
-        h2 {
-            color: #333;
-            margin-top: 30px;
-        }
-
-        .container {
-            padding: 20px;
+        .sidebar h2 {
             text-align: center;
         }
 
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background: #575757;
+        }
+
+        /* Main */
+        .main {
+            flex: 1;
+            background: #f4f6f9;
+            padding: 20px;
+        }
+
+        /* Cards */
+        .cards {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 150px;
+            padding: 20px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .blue { background: #3498db; }
+        .green { background: #2ecc71; }
+        .orange { background: #e67e22; }
+
+        /* Tables */
         table {
-            margin: 20px auto;
+            width: 100%;
+            margin-top: 20px;
             border-collapse: collapse;
-            width: 90%;
-            max-width: 800px;
             background: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden;
         }
 
         th, td {
-            padding: 12px;
-            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
         }
 
         th {
             background: #333;
             color: white;
         }
-
-        tr:hover {
-            background: #f1f1f1;
-        }
-
-        .footer {
-            margin-top: 40px;
-            padding: 15px;
-            background: #222;
-            color: white;
-        }
     </style>
 </head>
 <body>
 
-<h1>🏢 SSS Group – Construction Management System</h1>
-
-<div class="container">
-
-<h2>📊 Project Details</h2>
-
-<table>
-    <tr>
-        <th>Project Name</th>
-        <th>Location</th>
-        <th>Budget</th>
-    </tr>
-    <tr>
-        <td>Bridge Project</td>
-        <td>Delhi</td>
-        <td>₹50,00,000</td>
-    </tr>
-</table>
-
-<h2>👷 Workers</h2>
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Role</th>
-        <th>Daily Wage</th>
-    </tr>
-    <tr>
-        <td>Ravi</td>
-        <td>Engineer</td>
-        <td>₹1500</td>
-    </tr>
-    <tr>
-        <td>Amit</td>
-        <td>Labor</td>
-        <td>₹800</td>
-    </tr>
-</table>
-
-<h2>🏗 Materials</h2>
-
-<table>
-    <tr>
-        <th>Material</th>
-        <th>Cost per Unit</th>
-    </tr>
-    <tr>
-        <td>Cement</td>
-        <td>₹350</td>
-    </tr>
-    <tr>
-        <td>Steel</td>
-        <td>₹600</td>
-    </tr>
-</table>
-
+<div class="sidebar">
+    <h2>SSS Group</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Projects</a>
+    <a href="#">Workers</a>
+    <a href="#">Materials</a>
 </div>
 
-<div class="footer">
-    © 2026 SSS Group | Developed by Shubhanshu Mishra
+<div class="main">
+
+    <h1>📊 Dashboard</h1>
+
+    <div class="cards">
+        <div class="card blue">
+            <h3>Total Projects</h3>
+            <p>1</p>
+        </div>
+        <div class="card green">
+            <h3>Total Workers</h3>
+            <p>2</p>
+        </div>
+        <div class="card orange">
+            <h3>Total Budget</h3>
+            <p>₹50,00,000</p>
+        </div>
+    </div>
+
+    <h2>Projects</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Budget</th>
+        </tr>
+        <tr>
+            <td>Bridge Project</td>
+            <td>Delhi</td>
+            <td>₹50,00,000</td>
+        </tr>
+    </table>
+
+    <h2>Workers</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Wage</th>
+        </tr>
+        <tr>
+            <td>Ravi</td>
+            <td>Engineer</td>
+            <td>₹1500</td>
+        </tr>
+        <tr>
+            <td>Amit</td>
+            <td>Labor</td>
+            <td>₹800</td>
+        </tr>
+    </table>
+
+    <h2>Materials</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Cost</th>
+        </tr>
+        <tr>
+            <td>Cement</td>
+            <td>₹350</td>
+        </tr>
+        <tr>
+            <td>Steel</td>
+            <td>₹600</td>
+        </tr>
+    </table>
+
 </div>
 
 </body>
